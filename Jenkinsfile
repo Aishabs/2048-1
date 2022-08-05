@@ -3,7 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('roba-dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('Aisha-dockerhub')
 	}
 
 	stages {
@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t robaalmehmadi/2048:latest .'
+				sh 'docker build -t aishabs/2048:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push robaalmehmadi/2048:latest'
+				sh 'docker push raishabs/2048:latest'
 			}
 		}
 	}
